@@ -36,9 +36,11 @@ PRs and feedback welcome via GitHub issues.
 
 <a name="_librarymd"></a>
 
-[@raydeck/react-modal-base - v1.0.2](#readmemd)
+**@raydeck/react-modal-base - v2.0.0**
 
-# @raydeck/react-modal-base - v1.0.2
+> Globals
+
+# @raydeck/react-modal-base - v2.0.0
 
 ## Index
 
@@ -55,57 +57,49 @@ PRs and feedback welcome via GitHub issues.
 
 ## Functions
 
-###  makeDeferred
+### makeDeferred
 
-▸ **makeDeferred**‹**T**›(): *[DeferredType](#interfacesdeferredtypemd)‹T›*
+▸ **makeDeferred**\<T>(): [DeferredType](#interfacesdeferredtypemd)\<T>
 
-Defined in index.tsx:14
+*Defined in index.tsx:14*
 
-**Type parameters:**
+#### Type parameters:
 
-▪ **T**
+Name |
+------ |
+`T` |
 
-**Returns:** *[DeferredType](#interfacesdeferredtypemd)‹T›*
+**Returns:** [DeferredType](#interfacesdeferredtypemd)\<T>
 
 ___
 
-###  makeDialog
+### makeDialog
 
-▸ **makeDialog**‹**PromiseType**, **ArgsType**›(`Dialog`: FC‹ArgsType & [ContextType](#interfacescontexttypemd)‹PromiseType› & object›, `setValue`: function, `setContext`: function): *[FC, function, function]*
+▸ **makeDialog**\<PromiseType, ArgsType>(`__namedParameters`: { Dialog: FC\<ArgsType & [ContextType](#interfacescontexttypemd)\<PromiseType> & { reject?: undefined \| (reason?: any) => void ; resolve?: undefined \| (arg?: PromiseType) => void  }> ; setValue: () => ArgsType ; setContext: (__namedParameters: {}) => void  }): [FC, () => (args: ArgsType) => Promise\<PromiseType \| undefined>, (C: FC) => FC]
 
-Defined in index.tsx:29
+*Defined in index.tsx:29*
 
-**Type parameters:**
-
-▪ **PromiseType**
-
-▪ **ArgsType**: *[BaseType](#interfacesbasetypemd)*
-
-**Parameters:**
-
-▪ **Dialog**: *FC‹ArgsType & [ContextType](#interfacescontexttypemd)‹PromiseType› & object›*
-
-▪ **setValue**: *function*
-
-▸ (): *ArgsType*
-
-▪`Default value`  **setContext**: *function*= ({}) => {}
-
-▸ (`args`: Partial‹ArgsType›, `baseContext`: [ContextType](#interfacescontexttypemd)‹PromiseType› & ArgsType): *void*
-
-**Parameters:**
+#### Type parameters:
 
 Name | Type |
 ------ | ------ |
-`args` | Partial‹ArgsType› |
-`baseContext` | [ContextType](#interfacescontexttypemd)‹PromiseType› & ArgsType |
+`PromiseType` | - |
+`ArgsType` | [BaseType](#interfacesbasetypemd) |
 
-**Returns:** *[FC, function, function]*
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`__namedParameters` | { Dialog: FC\<ArgsType & [ContextType](#interfacescontexttypemd)\<PromiseType> & { reject?: undefined \| (reason?: any) => void ; resolve?: undefined \| (arg?: PromiseType) => void  }> ; setValue: () => ArgsType ; setContext: (__namedParameters: {}) => void  } |
+
+**Returns:** [FC, () => (args: ArgsType) => Promise\<PromiseType \| undefined>, (C: FC) => FC]
 
 
 <a name="interfacesbasetypemd"></a>
 
-[@raydeck/react-modal-base - v1.0.2](#readmemd) › [BaseType](#interfacesbasetypemd)
+**@raydeck/react-modal-base - v2.0.0**
+
+> [Globals](#readmemd) / BaseType
 
 # Interface: BaseType
 
@@ -118,13 +112,15 @@ Name | Type |
 
 <a name="interfacescontexttypemd"></a>
 
-[@raydeck/react-modal-base - v1.0.2](#readmemd) › [ContextType](#interfacescontexttypemd)
+**@raydeck/react-modal-base - v2.0.0**
 
-# Interface: ContextType ‹**PromiseType**›
+> [Globals](#readmemd) / ContextType
+
+# Interface: ContextType\<**PromiseType**>
 
 ## Type parameters
 
-▪ **PromiseType**
+* PromiseType
 
 ## Hierarchy
 
@@ -136,63 +132,55 @@ Name | Type |
 
 ### Properties
 
-* [deferred](#optional-deferred)
+* [deferred](#deferred)
 * [isOpen](#isopen)
-* [setDeferred](#optional-setdeferred)
+* [setDeferred](#setdeferred)
 * [setIsOpen](#setisopen)
 
 ## Properties
 
-### `Optional` deferred
+### deferred
 
-• **deferred**? : *[DeferredType](#interfacesdeferredtypemd)‹PromiseType›*
+• `Optional` **deferred**: [DeferredType](#interfacesdeferredtypemd)\<PromiseType>
 
-Defined in index.tsx:26
-
-___
-
-###  isOpen
-
-• **isOpen**: *boolean*
-
-Defined in index.tsx:24
+*Defined in index.tsx:26*
 
 ___
 
-### `Optional` setDeferred
+### isOpen
 
-• **setDeferred**? : *undefined | function*
+•  **isOpen**: boolean
 
-Defined in index.tsx:27
+*Defined in index.tsx:24*
 
 ___
 
-###  setIsOpen
+### setDeferred
 
-• **setIsOpen**: *function*
+• `Optional` **setDeferred**: undefined \| (deferred: [DeferredType](#interfacesdeferredtypemd)\<PromiseType>) => void
 
-Defined in index.tsx:25
+*Defined in index.tsx:27*
 
-#### Type declaration:
+___
 
-▸ (`isOpen`: boolean): *void*
+### setIsOpen
 
-**Parameters:**
+•  **setIsOpen**: (isOpen: boolean) => void
 
-Name | Type |
------- | ------ |
-`isOpen` | boolean |
+*Defined in index.tsx:25*
 
 
 <a name="interfacesdeferredtypemd"></a>
 
-[@raydeck/react-modal-base - v1.0.2](#readmemd) › [DeferredType](#interfacesdeferredtypemd)
+**@raydeck/react-modal-base - v2.0.0**
 
-# Interface: DeferredType ‹**T**›
+> [Globals](#readmemd) / DeferredType
+
+# Interface: DeferredType\<**T**>
 
 ## Type parameters
 
-▪ **T**
+* T
 
 ## Hierarchy
 
@@ -202,30 +190,30 @@ Name | Type |
 
 ### Properties
 
-* [promise](#optional-promise)
-* [reject](#optional-reject)
-* [resolve](#optional-resolve)
+* [promise](#promise)
+* [reject](#reject)
+* [resolve](#resolve)
 
 ## Properties
 
-### `Optional` promise
+### promise
 
-• **promise**? : *Promise‹T›*
+• `Optional` **promise**: Promise\<T>
 
-Defined in index.tsx:12
-
-___
-
-### `Optional` reject
-
-• **reject**? : *undefined | function*
-
-Defined in index.tsx:11
+*Defined in index.tsx:12*
 
 ___
 
-### `Optional` resolve
+### reject
 
-• **resolve**? : *undefined | function*
+• `Optional` **reject**: undefined \| (reason?: any) => void
 
-Defined in index.tsx:10
+*Defined in index.tsx:11*
+
+___
+
+### resolve
+
+• `Optional` **resolve**: undefined \| (arg?: T) => void
+
+*Defined in index.tsx:10*
