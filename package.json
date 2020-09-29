@@ -1,7 +1,7 @@
 {
   "name": "@raydeck/react-modal-base",
   "private": false,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "lib/index.js",
   "bin": "lib/bin.js",
