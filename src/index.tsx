@@ -45,7 +45,10 @@ function makeDialog<PromiseType, ArgsType extends BaseType>({
   ) => void;
 }): [
   FC,
-  () => (args: ArgsType) => Promise<PromiseType | undefined>,
+  () => [
+    (arg: Partial<ArgsType>) => Promise<PromiseType | undefined>,
+    (arg?: PromiseType) => void
+  ],
   (C: FC) => FC
 ] {
   const context = createContext<
@@ -81,9 +84,10 @@ function makeDialog<PromiseType, ArgsType extends BaseType>({
       </Provider>
     );
   };
-  const useShowDialog: () => (
-    args: Partial<ArgsType>
-  ) => Promise<PromiseType | undefined> = () => {
+  const useShowDialog: () => [
+    (args: Partial<ArgsType>) => Promise<PromiseType | undefined>,
+    (arg?: PromiseType) => void
+  ] = () => {
     const myContext = useContext(context);
     const showDialog = useCallback(
       async (args: Partial<ArgsType>): Promise<PromiseType> => {
@@ -100,7 +104,15 @@ function makeDialog<PromiseType, ArgsType extends BaseType>({
       },
       myContext ? Object.values(myContext) : []
     );
-    return showDialog;
+    const resolve = useCallback<(arg?: PromiseType) => void>(
+      (arg: PromiseType | undefined) => {
+        myContext!.setIsOpen(false);
+        if (myContext && myContext.deferred) myContext.deferred.resolve!(arg);
+      },
+      [myContext]
+    );
+
+    return [showDialog, resolve];
   };
   const withProvider = (C: FC): FC => (props) => (
     <WrappedProvider>
