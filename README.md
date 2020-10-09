@@ -61,7 +61,7 @@ PRs and feedback welcome via GitHub issues.
 
 ▸ **makeDeferred**\<T>(): [DeferredType](#interfacesdeferredtypemd)\<T>
 
-*Defined in [index.tsx:14](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L14)*
+*Defined in [index.tsx:14](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L14)*
 
 #### Type parameters:
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **makeDialog**\<PromiseType, ArgsType>(`__namedParameters`: { Dialog: FC\<ArgsType & [ContextType](#interfacescontexttypemd)\<PromiseType> & { reject?: undefined \| (reason?: any) => void ; resolve?: undefined \| (arg?: PromiseType) => void  }> ; useSetValue: () => ArgsType ; useSetContext: (__namedParameters: {}) => void  }): [FC, () => [(arg: Partial\<ArgsType>) => Promise\<PromiseType \| undefined>, (arg?: PromiseType) => void], (C: FC) => FC]
 
-*Defined in [index.tsx:29](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L29)*
+*Defined in [index.tsx:29](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L29)*
 
 #### Type parameters:
 
@@ -143,7 +143,7 @@ Name | Type |
 
 • `Optional` **deferred**: [DeferredType](#interfacesdeferredtypemd)\<PromiseType>
 
-*Defined in [index.tsx:26](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L26)*
+*Defined in [index.tsx:26](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L26)*
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 •  **isOpen**: boolean
 
-*Defined in [index.tsx:24](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L24)*
+*Defined in [index.tsx:24](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L24)*
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 • `Optional` **setDeferred**: undefined \| (deferred: [DeferredType](#interfacesdeferredtypemd)\<PromiseType>) => void
 
-*Defined in [index.tsx:27](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L27)*
+*Defined in [index.tsx:27](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L27)*
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 •  **setIsOpen**: (isOpen: boolean) => void
 
-*Defined in [index.tsx:25](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L25)*
+*Defined in [index.tsx:25](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L25)*
 
 
 <a name="interfacesdeferredtypemd"></a>
@@ -200,7 +200,7 @@ ___
 
 • `Optional` **promise**: Promise\<T>
 
-*Defined in [index.tsx:12](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L12)*
+*Defined in [index.tsx:12](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L12)*
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 • `Optional` **reject**: undefined \| (reason?: any) => void
 
-*Defined in [index.tsx:11](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L11)*
+*Defined in [index.tsx:11](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L11)*
 
 ___
 
@@ -216,4 +216,4 @@ ___
 
 • `Optional` **resolve**: undefined \| (arg?: T) => void
 
-*Defined in [index.tsx:10](https://github.com/rhdeck/react-modal-base/blob/3280e6e/src/index.tsx#L10)*
+*Defined in [index.tsx:10](https://github.com/rhdeck/react-modal-base/blob/aff9517/src/index.tsx#L10)*
