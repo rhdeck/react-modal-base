@@ -26,7 +26,7 @@ interface ContextType<PromiseType> extends BaseType {
   deferred?: DeferredType<PromiseType>;
   setDeferred?: (deferred: DeferredType<PromiseType>) => void;
 }
-function makeDialog<PromiseType, ArgsType extends BaseType>({
+function makeDialog<PromiseType, ArgsType extends BaseType, T = any>({
   Dialog,
   useSetValue,
   useSetContext = ({}) => {},
@@ -49,7 +49,7 @@ function makeDialog<PromiseType, ArgsType extends BaseType>({
     (arg: Partial<ArgsType>) => Promise<PromiseType | undefined>,
     (arg?: PromiseType) => void
   ],
-  (C: FC) => FC
+  (C: FC<T>) => FC<T>
 ] {
   const context = createContext<
     (ContextType<PromiseType> & ArgsType) | undefined
@@ -114,7 +114,7 @@ function makeDialog<PromiseType, ArgsType extends BaseType>({
 
     return [showDialog, resolve];
   };
-  const withProvider = (C: FC): FC => (props) => (
+  const withProvider = (C: FC<T>): FC<T> => (props: T) => (
     <WrappedProvider>
       <C {...props} />
     </WrappedProvider>
